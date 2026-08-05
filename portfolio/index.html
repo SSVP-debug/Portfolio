@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shiva Shankara Vara Prasad AI/ML &amp; Backend Engineer</title>
+<meta name="description" content="AI/ML &amp; Backend engineering portfolio systems that run, not just demo." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#hero" class="nav-logo">Shiva Shankara Vara Prasad<span class="dot">.</span></a>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="assets/resume.pdf" download class="btn btn-primary btn-small" id="navResumeBtn">Resume ↓</a>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="grid-bg" id="gridBg"></div>
+  <div class="grid-glow"></div>
+
+  <div class="hero-inner">
+    <div class="copy">
+      <div class="eyebrow">Open to internships · AI/ML &amp; backend</div>
+      <h1>Building systems<br>that <span class="accent">run</span>, not just <span class="accent">demo</span>.</h1>
+      <p class="subtext">
+        3rd-year AI &amp; ML engineer at Marwadi University. I write code that
+        survives being cloned documented architecture, honest metrics, tests
+        that pass.
+      </p>
+      <div class="stack-line"><span>stack </span> Python · scikit-learn · LangGraph · React · Redis</div>
+      <div class="cta-row">
+        <a href="assets/resume.pdf" download class="btn btn-primary">Download Resume ↓</a>
+        <a href="https://github.com/SSVP-debug" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+
+    <div class="portrait-stage" id="stage">
+      <canvas id="graph-canvas"></canvas>
+
+      <div class="node-tag t1">planner → writer</div>
+      <div class="node-tag t2">4 agents · concurrent</div>
+
+      <div class="portrait-wrap" id="portraitWrap">
+        <img src="assets/photo.png" alt="Portrait" class="portrait-img" id="portraitImg" />
+        <svg class="cutout-placeholder" id="placeholderSvg" viewBox="0 0 300 410" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="figGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#2C3A5E"/>
+              <stop offset="100%" stop-color="#151E33"/>
+            </linearGradient>
+            <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F0A84E" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#F0A84E" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M150 20c34 0 58 26 58 62 0 24-9 42-24 54 44 16 74 52 78 108l4 76c1 12-8 22-20 22H54c-12 0-21-10-20-22l4-76c4-56 34-92 78-108-15-12-24-30-24-54 0-36 24-62 58-62z" fill="url(#figGrad)"/>
+          <path d="M150 20c34 0 58 26 58 62 0 24-9 42-24 54 44 16 74 52 78 108l4 76c1 12-8 22-20 22h-10" fill="none" stroke="url(#rim)" stroke-width="3"/>
+        </svg>
+      </div>
+
+      <div class="photo-hint" id="photoHint">
+        drop <code>photo.png</code> in <code>/assets</code> or use Preview mode ↘
+      </div>
+    </div>
+  </div>
+
+  <!-- floating tech badges drifting near the hero -->
+  <div class="badge-field" id="badgeField" aria-hidden="true"></div>
+
+  <div class="scroll-cue">scroll<span></span></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="eyebrow reveal">01 · About</div>
+    <div class="about-grid">
+      <h2 class="reveal">I'd rather ship one project that survives a<br class="br-desktop"> code review than five that don't.</h2>
+      <p class="reveal">
+        Two years into writing code, and most of that time went into learning
+        the difference between a working demo and a working system. Most
+        student portfolios optimize for looking impressive. Mine optimizes
+        for surviving scrutiny a recruiter who actually clones the repo,
+        reads the README, and checks whether the numbers add up. That means
+        synthetic data with documented provenance instead of unverifiable
+        claims, incremental commit history instead of a single dropped-in
+        blob, and architecture that matches what I call it a "multi-agent
+        system" that actually passes data between agents, not four parallel
+        one-shot calls wearing a label.
+      </p>
+    </div>
+    <div class="stats-row">
+      <div class="stat-item reveal"><span class="stat-num">2</span><span class="stat-label">years coding</span></div>
+      <div class="stat-item reveal"><span class="stat-num">3rd</span><span class="stat-label">year, AI &amp; ML</span></div>
+      <div class="stat-item reveal"><span class="stat-num">3</span><span class="stat-label">shipped projects</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PROJECT ============ -->
+<section class="section section-featured" id="work">
+  <div class="section-inner">
+    <div class="eyebrow reveal">02 · Featured build</div>
+    <div class="featured-card reveal">
+      <div class="featured-text">
+        <h3>code-club</h3>
+        <p>A full-stack DSA practice platform architecture docs, API
+          contracts, database schema references, CI via GitHub Actions,
+          graceful degradation when optional infra is down. 270+ incremental
+          commits, not a single blob.</p>
+        <div class="tag-row">
+          <span>Full-stack</span><span>Redis</span><span>Judge0</span><span>CI/CD</span>
+        </div>
+        <div class="cta-row">
+          <a href="https://code-club-one.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-small">Live demo ↗</a>
+          <a href="https://github.com/SSVP-debug/code-club" target="_blank" rel="noopener" class="btn btn-ghost btn-small">Source ↗</a>
+        </div>
+      </div>
+      <div class="featured-visual project-media" data-slug="code-club">
+        <div class="mock-window media-fallback">
+          <div class="mock-bar"><span></span><span></span><span></span></div>
+          <div class="mock-line w70"></div>
+          <div class="mock-line w40"></div>
+          <div class="mock-line w85"></div>
+          <div class="mock-line w55"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OTHER PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <div class="eyebrow reveal">03 · Other work</div>
+    <div class="project-grid">
+      <a href="https://github.com/SSVP-debug/AI_Agent" target="_blank" rel="noopener" class="project-card reveal">
+        <div class="project-media project-thumb" data-slug="ai-agent">
+          <div class="thumb-fallback media-fallback">AI_Agent</div>
+        </div>
+        <h4>AI_Agent</h4>
+        <p>Multi-agent business-blueprint generator. Real DAG orchestration
+          concurrent agents resolved via topological sort, writer agent
+          consumes all upstream outputs. Grounded in live web search, not
+          just LLM recall.</p>
+        <div class="tag-row"><span>LangGraph-style DAG</span><span>Gemini</span><span>Tavily</span></div>
+        <span class="card-arrow">↗</span>
+      </a>
+      <a href="https://github.com/SSVP-debug/Burnout-prediction" target="_blank" rel="noopener" class="project-card reveal">
+        <div class="project-media project-thumb" data-slug="burnout-prediction">
+          <div class="thumb-fallback media-fallback">Burnout</div>
+        </div>
+        <h4>Burnout Predictor</h4>
+        <p>Employee burnout classifier on synthetic, provenance-documented
+          data. Honest model selection with cross-validation, confusion
+          matrix and per-class metrics in the README, 6 passing tests.</p>
+        <div class="tag-row"><span>scikit-learn</span><span>Streamlit</span><span>pytest</span></div>
+        <span class="card-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STACK floating badges ============ -->
+<section class="section" id="stack">
+  <div class="section-inner">
+    <div class="eyebrow reveal">04 · Stack</div>
+    <h2 class="reveal">Tools I reach for.</h2>
+    <div class="stack-groups" id="stackGroups"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section-contact" id="contact">
+  <div class="section-inner">
+    <div class="eyebrow reveal">05 · Contact</div>
+    <h2 class="reveal">Let's talk about an internship.</h2>
+    <p class="reveal contact-sub">The fastest way to reach me is email I check it daily.</p>
+    <div class="cta-row reveal">
+      <a href="mailto:ssvp006@gmail.com" class="btn btn-primary">Email me</a>
+      <a href="tel:+919951448094" class="btn btn-ghost">+91 99514 48094</a>
+      <a href="https://www.linkedin.com/in/shiva-shankara-vara-prasad-41928831b/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+      <a href="https://github.com/SSVP-debug" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+    </div>
+  </div>
+  <footer class="footer">Rajkot, Gujarat · built with intent, not a template</footer>
+</section>
+
+<!-- ============ PREVIEW / LOCAL ASSET PANEL ============ -->
+<button class="preview-toggle" id="previewToggle" title="Preview photo/resume locally">⚙</button>
+<div class="preview-panel" id="previewPanel">
+  <h5>Preview mode</h5>
+  <p>Try your photo/resume instantly in this browser tab. This does <strong>not</strong>
+    save anything for the live site, save the same files into
+    <code>/assets/photo.png</code> and <code>/assets/resume.pdf</code> with
+    those exact names, then redeploy. Project screenshots/videos work the
+    same way see <code>/assets/projects/README.txt</code>.</p>
+
+  <label class="file-row">
+    Photo (PNG, transparent bg)
+    <input type="file" id="photoInput" accept="image/png" />
+  </label>
+  <label class="file-row">
+    Resume (PDF)
+    <input type="file" id="resumeInput" accept="application/pdf" />
+  </label>
+  <button class="btn btn-ghost btn-small" id="closePreview">Close</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/128/three.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
