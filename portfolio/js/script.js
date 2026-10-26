@@ -3,8 +3,8 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 /* ---------------------------------------------------------
    Photo: assets/photo.png loads by convention. If it's not
    there yet, we fall back to the placeholder silhouette and
-   show a small hint. No path-editing required just drop a
-   file named exactly "photo.png" into /assets.
+   show a neutral status message.
+   
 --------------------------------------------------------- */
 const portraitImg = document.getElementById('portraitImg');
 const photoHint = document.getElementById('photoHint');
@@ -16,7 +16,6 @@ function markPhotoLoaded(){
 function markPhotoMissing(){
   portraitImg.classList.remove('is-loaded');
   photoHint.classList.remove('is-hidden');
-  photoHint.textContent = 'Portrait unavailable';
   photoHint.textContent = 'Portrait unavailable';
 }
 portraitImg.addEventListener('load', () => {
@@ -30,7 +29,7 @@ if (portraitImg.complete) {
 }
 
 /* ---------------------------------------------------------
-   Resume link: if assets/resume.pdf 404s, swap the button
+   Resume link: if assets/resume.pdf 404s, disable the buttons
    label so it's honest instead of silently broken.
 --------------------------------------------------------- */
 async function checkResume(){
