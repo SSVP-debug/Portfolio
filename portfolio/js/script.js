@@ -17,6 +17,7 @@ function markPhotoMissing(){
   portraitImg.classList.remove('is-loaded');
   photoHint.classList.remove('is-hidden');
   photoHint.textContent = 'Portrait unavailable';
+  photoHint.textContent = 'Portrait unavailable';
 }
 portraitImg.addEventListener('load', () => {
   // a 0-byte or broken placeholder can still "load" with 0 dimensions
@@ -38,8 +39,12 @@ async function checkResume(){
     if (!res.ok) throw new Error('missing');
   } catch (e) {
     document.querySelectorAll('#navResumeBtn, a[href="assets/resume.pdf"]').forEach(el => {
-      el.textContent = 'RESUME →';
+      el.textContent = 'Resume unavailable';
+      el.removeAttribute('href');
+      el.removeAttribute('download');
+      el.setAttribute('aria-disabled', 'true');
       el.style.opacity = '0.6';
+      el.style.pointerEvents = 'none';
     });
   }
 }
