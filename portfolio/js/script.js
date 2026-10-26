@@ -16,6 +16,7 @@ function markPhotoLoaded(){
 function markPhotoMissing(){
   portraitImg.classList.remove('is-loaded');
   photoHint.classList.remove('is-hidden');
+  photoHint.textContent = 'Portrait unavailable';
 }
 portraitImg.addEventListener('load', () => {
   // a 0-byte or broken placeholder can still "load" with 0 dimensions
